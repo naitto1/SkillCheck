@@ -1,0 +1,20 @@
+# Ignore the virtual environment directory
+.venv/
+
+# Add other common Python ignores:
+__pycache__/
+*.pyc
+*.pyd
+*.so
+
+# Ignore operating system specific files (e.g., macOS)
+.DS_Store
+
+# Ignore IDE specific files (if you use one, like VS Code)
+.vscode/
+
+# Ignore sensitive files if any (e.g., database credentials file not in .env)
+# my_secret_config.py
+
+# Ignore environment variables file
+.env
