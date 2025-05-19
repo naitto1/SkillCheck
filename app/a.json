@@ -1,0 +1,25 @@
+{
+    "success": true,
+    "message": "",
+    "data": [
+        {
+            "id": "4222271073",
+            "title": "B1.3 Licensed Engineer",
+            "url": "https://www.linkedin.com/jobs/view/4222271073",
+            "referenceId": "SociVq+8IioooLjDzISXLg==",
+            "posterId": "641149338",
+            "company": {
+                "name": "Gama Aviation",
+                "logo": "https://media.licdn.com/dms/image/v2/D4E0BAQGw4A8LNE-Uxw/company-logo_200_200/company-logo_200_200/0/1688022081673/gama_aviation_fzc_logo?e=1753315200&v=beta&t=lX9Blt7AUjJIZF6PuuZDpG278nTy_uxzP8g1c3gSkXM",
+                "url": "https://www.linkedin.com/company/gamaaviation/life",
+                "staffCountRange": {},
+                "headquarter": {}
+            },
+            "location": "Glasgow City, Scotland, United Kingdom (On-site)",
+            "postAt": "2025-05-06 15:58:35 +0000 UTC",
+            "postedTimestamp": 1746547115000
+        },
+        ...
+    ],
+    "total": 27990
+}
