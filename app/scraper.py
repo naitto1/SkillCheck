@@ -1,23 +1,18 @@
 import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-import csv
-import time
+import json
 
-# job_data = []
-# url = "https://www.linkedin.com/jobs/search/?currentJobId=4225916174&distance=25&geoId=103644278&keywords=Data%20Analyst&origin=JOBS_HOME_KEYWORD_HISTORY&refresh=true"
+url = "https://linkedin-data-api.p.rapidapi.com/search-jobs"
+output_json_path = "../dataset/rapid_api.json"
 
-# try:
-#     response = requests.get(url)
-#     response.raise_for_status()
+querystring = {"keywords":"data analyst","locationId":"92000000","datePosted":"anyTime","sort":"mostRelevant"}
 
-#     soup = BeautifulSoup(response.content, 'html-parser')
+headers = {
+	"x-rapidapi-key": "dafbd23b61msh01359a39b982dccp1237f3jsn7a976318b834",
+	"x-rapidapi-host": "linkedin-data-api.p.rapidapi.com"
+}
 
-#     job_listings = soup.find_all('h1', class='t-24 t-bold inline')
-    
-#     for job in job_listings:
-#         try:
-#             title_element = job.find('h2')
+response = requests.get(url, headers=headers, params=querystring)
 
-def extract(job_title):
-    
+with open(f"{output_json_path}", "w") as f:
+	json.dump(response.json(), f, indent=4)
+

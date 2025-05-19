@@ -5,4 +5,5 @@ pandas
 matplotlib
 psycopg2-binary
 plotly
+json
 
