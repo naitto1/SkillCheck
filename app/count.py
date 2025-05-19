@@ -2,7 +2,6 @@ import pandas as pd
 from collections import Counter
 import re 
 
-
 csv_file_path = '../dataset/job_skills.csv'
 skills_column_name = 'job_skills'
 output_csv_path = '../dataset/skill_counts.csv'
@@ -30,7 +29,6 @@ if skills_column_name not in df.columns:
     exit() 
 
 all_skills = []
-
 
 for skills_string in df[skills_column_name].astype(str).dropna():
     individual_skills = re.split('|'.join(map(re.escape, skill_delimiters)), skills_string)
