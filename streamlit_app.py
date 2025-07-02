@@ -3,7 +3,6 @@ import pandas as pd
 import plotly.express as px
 from collections import Counter
 
-# Function to load and cache data
 @st.cache_data
 def load_data():
     try:
@@ -32,11 +31,9 @@ def main():
     st.set_page_config(layout="wide")
     st.title("SKillCheck")
 
-    # --- Sidebar ---
     df = load_data()
 
     if df is not None:
-        # --- Data Understanding ---
         with st.expander("Data Preview and Understanding"):
             st.write("Here's a preview of the dataset:")
             st.dataframe(df.head())
@@ -44,7 +41,6 @@ def main():
             st.write("Number of postings:", len(df))
 
 
-        # --- Overall Analysis ---
         st.header("Overall Distribution:")
         col1, col2, col3 = st.columns(3)
 
