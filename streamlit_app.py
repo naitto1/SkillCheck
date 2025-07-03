@@ -6,7 +6,7 @@ from collections import Counter
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('/home/yusse/Coding/SkillCheck/dataset/cleaned_job_postings.csv')
+        df = pd.read_csv('dataset/cleaned_job_postings.csv')
         return df
     except FileNotFoundError:
         st.error("Error: cleaned_job_postings.csv not found at the specified path. Please ensure the file exists.")
@@ -36,7 +36,7 @@ def main():
     if df is not None:
         with st.expander("Data Preview and Understanding"):
             st.write("Here's a preview of the dataset:")
-            st.dataframe(df.head())
+            st.dataframe(df.head(3))
             st.write("Columns:", df.columns.tolist())
             st.write("Number of postings:", len(df))
 
